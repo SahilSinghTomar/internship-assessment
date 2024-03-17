@@ -1,0 +1,26 @@
+.progress-div {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+}
+
+.progress-item {
+    /* display: flex; */
+    /* margin: 1px; */
+    height: 100%;
+    /* border-radius: 10px; */
+    background-color: #4CAF50;
+}
+
+.progress-item p {
+    display: inline;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+}
