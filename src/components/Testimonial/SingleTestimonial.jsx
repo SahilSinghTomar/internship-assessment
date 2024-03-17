@@ -4,7 +4,7 @@ const Singletestimonial = ({ element }) => {
   // console.log(element)
 
   return (
-    <div className="testimonials-box mb-3">
+    <div className="testimonials-box">
       <div className="testimonial-content">
           <div className="t-avatar">
             <img className='t-image' src={element.image.url} title="" alt="" />

@@ -646,15 +646,20 @@ a {
 /* ----------------------
 * Testimonial Section
 ---------------------------*/
+.testimonials {
+  height: 100%;
+}
+
 .testimonials-box {
   border: 2px solid white;
   border-radius: 10px;
+  height: 350px;
 
   .testimonial-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     @include down-sm {
       padding: 30px;
@@ -677,9 +682,6 @@ a {
       font-weight: 600;
       line-height: 1.4;
       margin-bottom: 40px;
-      @include down-sm {
-        font-size: 24px;
-      }
     }
     .t-lead {
       margin-top: auto;
