@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { Icon } from "@iconify/react";
-import { socialData } from "../../data.json";
 
-const Modal = ({ img, title, date, subTitle, paraList, modalClose }) => {
+const Modal = ({ img, title, paraList, social_handles, modalClose }) => {
   const modalStyle = {
     backgroundColor: 'rgba(0,0,0,.6)',
     backdropFilter: "saturate(180%) blur(8px)",
     display: "block"
   };
+
   return (
     <div className="modal show fade bd-example-modal-lg" style={modalStyle}>
       <div className="px-modal">
@@ -17,20 +17,18 @@ const Modal = ({ img, title, date, subTitle, paraList, modalClose }) => {
             <img src={img} title="" alt="" />
           </div>
           <div className="single-blog-content">
-            {date && <h6>{date}</h6>}
-            {subTitle && <h5>{subTitle}</h5>}
             <h2>{title}</h2>
             {paraList && paraList.map((element, index) => (
-              <p key={index}>{element.text}</p>
+              <p key={index}>{element}</p>
             ))
             }
             <div className="blog-meta">
               <label>Share</label>
               <ul className="nav social-link">
-                {socialData.map((element, index) => (
+                {social_handles.map((element, index) => (
                   <li key={index}>
-                    <a href={element.link}>
-                      <Icon icon={`bi:${element.icon}`} />
+                    <a href={element.url}>
+                      <Icon icon={`bi:${element.platform.toLowerCase()}`} />
                     </a>
                   </li>
                 ))}
@@ -46,10 +44,9 @@ const Modal = ({ img, title, date, subTitle, paraList, modalClose }) => {
 Modal.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string,
-  subTitle: PropTypes.string,
-  date: PropTypes.string,
   paraList: PropTypes.array,
   modalClose: PropTypes.func,
+  social_handles: PropTypes.array
 }
 
 export default Modal;

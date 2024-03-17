@@ -20,7 +20,7 @@ const Home = ({ user }) => {
   const heroData = {...user.about, email: user.email, social_handles: user.social_handles};
   const aboutData = {...user.about, email:user.email};
   const experienceData = {...user.about, timeline: user.timeline};
-  const portfolioData = user.projects;
+  const portfolioData = {projects: user.projects, social_handles:user.social_handles};
   const serviceData = user.services;
   const sliderData = user.testimonials;
   const skillsData = user.skills;
