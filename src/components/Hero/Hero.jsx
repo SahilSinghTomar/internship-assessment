@@ -8,6 +8,12 @@ import { Link as ScrollLink } from "react-scroll";
 const Hero = ({ data }) => {
   const { name, title, avatar, phoneNumber, email, social_handles, address } = data;
 
+   const backGroundStyle = {
+    backgroundImage: `url(${avatar.url})`,
+    WebkitMaskImage: 'radial-gradient(circle, black 45%, rgba(0, 0, 0, 0.5) 45%)',
+    maskImage: 'radial-gradient(circle, black 45%, rgba(0, 0, 0, 0.5) 45%)',
+  };
+
   // "title": "My name<br />is <b>Lilon</b> <span><br />Macwan...</span>",
   // "subTitle": "<span>Web Designer</span> based in <span>USA</span>",
 
@@ -49,7 +55,7 @@ const Hero = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="hb-me" style={{ backgroundImage: `url(${avatar.url})` }} data-aos="fade-left" data-aos-duration="800" data-aos-delay="800"/>
+      <div className="hb-me" style={backGroundStyle} data-aos="fade-left" data-aos-duration="800" data-aos-delay="800"/>
       <div className="social-fix">
         <div className="social-links" >
           {
