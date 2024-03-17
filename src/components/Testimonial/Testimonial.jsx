@@ -1,7 +1,8 @@
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Carousel from "../Carousel/Carousel";
+import PropTypes from 'prop-types';
 
-const Testimonial = ({data, testimonialSettings, brandSettings}) => {
+const Testimonial = ({ data, testimonialSettings }) => {
 
   return (
     <section id="testimonials" className="section testimonials-section bg-g">
@@ -14,5 +15,11 @@ const Testimonial = ({data, testimonialSettings, brandSettings}) => {
     </section >
   )
 }
+
+Testimonial.propTypes = {
+  data: PropTypes.array.isRequired,
+  testimonialSettings: PropTypes.object.isRequired,
+  brandSettings: PropTypes.object.isRequired,
+};
 
 export default Testimonial

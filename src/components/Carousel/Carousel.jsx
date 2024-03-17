@@ -3,7 +3,7 @@ import Singletestimonial from '../Testimonial/SingleTestimonial';
 import "slick-carousel/slick/slick.css";
 import Brand from '../Brand/Brand';
 
-
+import PropTypes from 'prop-types';
 
 const Carousel = ({ useFor, data, settings }) => {
 
@@ -28,6 +28,12 @@ const Carousel = ({ useFor, data, settings }) => {
       </Slider>
     )
   }
+}
+
+Carousel.propTypes = {
+  useFor: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
+  settings: PropTypes.object.isRequired
 }
 
 export default Carousel

@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
 
 const Singletestimonial = ({ element }) => {
+  // console.log(element)
+
   return (
     <div className="testimonials-box mb-3">
-      <div className="row gy-4">
-        <div className="col-sm-7 col-lg-8">
+      <div className="testimonial-content">
+          <div className="t-avatar">
+            <img className='t-image' src={element.image.url} title="" alt="" />
+          </div>
           <div className="t-text">
             <p>“{element.review}”</p>
             <div className="t-lead">
@@ -12,12 +16,6 @@ const Singletestimonial = ({ element }) => {
               <span>{element.position}</span>
             </div>
           </div>
-        </div>
-        <div className="col-sm-5 col-lg-4">
-          <div className="t-avatar">
-            <img src={element.image.url} title="" alt="" />
-          </div>
-        </div>
       </div>
     </div>
   )

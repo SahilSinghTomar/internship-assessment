@@ -286,6 +286,8 @@
     "testimonialInfo": {
       "useFor": "testimonial",
       "settings": {
+        "className": "center",
+        "centerMode": true,
         "infinite": true,
         "speed": 1500,
         "autoplay": true,

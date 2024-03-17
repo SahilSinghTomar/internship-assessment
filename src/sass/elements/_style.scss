@@ -646,17 +646,34 @@ a {
 /* ----------------------
 * Testimonial Section
 ---------------------------*/
-.testimonials {
-  padding-bottom: 45px;
-}
-
 .testimonials-box {
+  border: 2px solid white;
+  border-radius: 10px;
+
+  .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    @include down-sm {
+      padding: 30px;
+    }
+  }
+
+  .t-image {
+    max-width: 15%;
+    border-radius: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
   .t-text {
     display: flex;
     flex-direction: column;
     height: 100%;
     p {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 600;
       line-height: 1.4;
       margin-bottom: 40px;
