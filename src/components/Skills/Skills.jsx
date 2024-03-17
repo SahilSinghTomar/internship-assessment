@@ -1,13 +1,13 @@
 import SectionHeading from "../SectionHeading/SectionHeading"
 import Progress from "../Progress/Progress";
-import PropTypes from 'prop-types';
+ import PropTypes from 'prop-types';
 
 const Skills = ({ data }) => {
  data.sort((a, b) => a.sequence - b.sequence);
 
   return (
     <section id="skills">
-        <SectionHeading title="My Skills" />
+        <SectionHeading title="I Develop Skills Regularly" subTitle="My Skills" />
         <ul className="skills-list">
             {data.map((skill, index) => (
                 <li className="skill" key={index}>
