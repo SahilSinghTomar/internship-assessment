@@ -25,7 +25,7 @@ const App = () => {
       try {
         const res = await fetch("https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae")
         if (!res.ok) {
-          throw new Error("Cannot fetch the data for the user. Please try again later.")
+          throw new Error("Something went very wrong. Please try again later.")
         }
         const resData = await res.json()
         setData(resData.user)
