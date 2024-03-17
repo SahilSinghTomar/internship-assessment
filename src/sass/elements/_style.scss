@@ -169,7 +169,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    // text-fill-color: transparent;
     margin: 0 0 10px;
     @include down-sm {
       font-size: 35px;
@@ -230,7 +230,7 @@ a {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-fill-color: transparent;
+      // text-fill-color: transparent;
     }
     span {
       flex: 1;
@@ -441,7 +441,7 @@ a {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-fill-color: transparent;
+            // text-fill-color: transparent;
             &:after {
               background: var(--px-theme);
             }
